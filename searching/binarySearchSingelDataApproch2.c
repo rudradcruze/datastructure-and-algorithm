@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 // Function declaration
-int binarySearch(int data[], int first, int last, int search);
+int binarySearch(int data[], int first, int last, int search, int odering);
 
 int main(){
 
-    int elementSize, searchResult, search;
+    int elementSize, searchResult, search, oderingTest;
     printf("Enter the total element size: ");
     scanf("%d", &elementSize);
     printf("\n");
@@ -19,10 +19,18 @@ int main(){
         scanf("%d", &data[i]);
     }
 
+    // Check ascending and descending order
+    if (data[0] < data[elementSize - 1])
+    {
+        oderingTest = 0;
+    }else {
+        oderingTest = 1;
+    }
+
     printf("\nEnter the seraching element: ");
     scanf("%d", &search);
     
-    searchResult = binarySearch(data, 0, elementSize - 1, search);
+    searchResult = binarySearch(data, 0, elementSize - 1, search, oderingTest);
 
     if (searchResult == -1)
     {
@@ -40,18 +48,31 @@ int main(){
 }
 
 
-int binarySearch(int data[], int first, int last, int search) {
+int binarySearch(int data[], int first, int last, int search, int odering) {
+    int mid;
     while (last >= first)
     {
 
-        int mid = first + (last - first) / 2;
+        mid = first + (last - first) / 2;
         if (data[mid] == search)
         {
             return mid;
         }else if(data[mid] > search) {
-            last = mid - 1;
+            if (odering == 0)
+            {
+                last = mid - 1;
+            }else {
+                first = mid + 1;
+            }
+            
         }else {
-            first = mid + 1;
+            if (odering == 0)
+            {
+                first = mid + 1;
+            }else {
+                last = mid - 1;
+            }
+            
         }
         
     }
