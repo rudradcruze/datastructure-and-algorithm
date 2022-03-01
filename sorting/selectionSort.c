@@ -1,3 +1,8 @@
+/*
+    The program is about selection sort
+    Author Name  : Francis Rudra D Cruze
+    Author Email : francisrudra@gmail.com
+*/
 #include <stdio.h>
 
 // Function Declaration
@@ -8,21 +13,17 @@ int main(){
     int size, i;
 
     // Defining the total size of the elements
-//    printf("Enter the total element size: ");
-//    scanf("%d", &size);
-//    printf("\n");
+    printf("Enter the total element size: ");
+    scanf("%d", &size);
+    printf("\n");
 
-    // // Declaraing the data containing array and getting input from the user
-//    int data[size];
-//    for (i = 0; i < size; i++)
-//    {
-//        printf("Enter the %d number: ", i+1);
-//        scanf("%d", &data[i]);
-//    }
-
-    int data[]={64,25,12,22,11};
-
-    size = sizeof(data)/sizeof(data[0]);
+    // Declaraing the data containing array and getting input from the user
+    int data[size];
+    for (i = 0; i < size; i++)
+    {
+        printf("Enter the %d number: ", i+1);
+        scanf("%d", &data[i]);
+    }
 
     selectionSort(data, size);     // Selection sort function call
 

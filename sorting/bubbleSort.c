@@ -1,3 +1,8 @@
+/*
+    The program is about bubble sort
+    Author Name  : Francis Rudra D Cruze
+    Author Email : francisrudra@gmail.com
+*/
 #include <stdio.h>
 
 // Function Declaration
