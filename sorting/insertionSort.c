@@ -58,6 +58,5 @@ void insertionSort(int data[], int size){
         data[j+1] = temp;
         
     }
-    
-    
+
 }

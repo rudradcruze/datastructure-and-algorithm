@@ -43,7 +43,7 @@ void selectionSort(int data[], int size)
 {
     int position;
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         position = i;
 
