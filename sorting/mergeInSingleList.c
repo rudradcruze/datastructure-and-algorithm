@@ -24,7 +24,7 @@ int main(){
     return 0;
 }
 
-
+// The function is for merging in a single array.
 void mergeInSingleList(int data[], int low, int mid, int high)
 {
     int i, j ,k;
