@@ -15,6 +15,7 @@ int main(){
     int sizeOne = sizeof(dataOne) / sizeof(dataOne[0]);
     int sizeTwo = sizeof(dataTwo) / sizeof(dataTwo[0]);
 
+    // Merge data storing array/list
     int mergedData[sizeOne + sizeTwo];
 
     // Call mergeTwoList function to merge two separated list (array)
@@ -32,7 +33,7 @@ int main(){
 }
 
 
-
+// Function for merging two list
 void mergeTwoList(int dataOne[], int dataTwo[], int mergedData[], int sizeOne, int sizeTwo)
 {
     int i, j, k;
