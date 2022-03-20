@@ -27,7 +27,7 @@ int main(){
 void mergeList(int data[], int low, int mid, int high)
 {
     int i, j, k;
-    int temp[high + 2];
+    int temp[high + 1];
 
     i = low;
     j = mid + 1;

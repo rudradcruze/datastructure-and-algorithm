@@ -47,6 +47,6 @@ void mergeInSingleList(int data[], int low, int mid, int high)
     for( ; j <= high; j++)
         temp[k++] = data[j];
 
-    for(i = 1; i <= high; i++)
+    for(i = low; i <= high; i++)
         data[i] = temp[i];
 }
